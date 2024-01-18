@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Ejercicio1
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=msg
+comment2.target=void\ mensaje(java.lang.String)
+comment3.params=n1\ n2
+comment3.target=int\ suma(int,\ int)
+numComments=4

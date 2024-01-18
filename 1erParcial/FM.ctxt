@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=FM
+comment1.params=msg
+comment1.target=int\ pedirEntero(java.lang.String)
+comment2.params=m
+comment2.target=void\ mensaje(java.lang.String)
+numComments=3
