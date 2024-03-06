@@ -15,4 +15,25 @@ public class Yate extends Coordenada
     {
         g.drawImage(imagen,getX(),getY(),null);
     }
+    public void mover(char dir)
+    {
+        if(dir=='r')//mov a la derecha = right
+        {
+            //int xx=getX();
+            //setX(xx++);
+            x++;
+        }
+        else if(dir=='l')//mov a la izq =left
+        {
+            
+        }
+        else if(dir=='u')//mov para arriba =up
+        {
+            
+        }
+        else if(dir=='d')//mov para abajo =down
+        {
+            
+        }
+    }
 }

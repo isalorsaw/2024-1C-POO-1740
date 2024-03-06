@@ -1,8 +1,10 @@
 public class Coordenada
 {
     //Atributos
-    private int x;
-    private int y;
+    //private 
+    int x;
+    //private 
+    int y;
     //Constructor Vacio
     public Coordenada()
     {
