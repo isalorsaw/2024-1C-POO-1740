@@ -38,7 +38,9 @@ public class Escenario extends JPanel implements KeyListener //Implementando los
         System.out.println(codigo);
         
         if(codigo==39)//Mover para la derecha
-        lancha.mover('r');//right=derecha
+        lancha.mover('r',"imagenes/lancha_der.png");//right=derecha
+        else if(codigo==37)
+        lancha.mover('l',"imagenes/lancha_izq.png");
         
         repaint();
         

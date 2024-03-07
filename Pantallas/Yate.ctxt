@@ -2,8 +2,12 @@
 comment0.target=Yate
 comment1.params=ruta\ x\ y
 comment1.target=Yate(java.lang.String,\ int,\ int)
-comment2.params=g
-comment2.target=void\ dibuja(java.awt.Graphics)
-comment3.params=dir
-comment3.target=void\ mover(char)
-numComments=4
+comment2.params=ruta
+comment2.target=void\ setImagen(java.lang.String)
+comment3.params=g
+comment3.target=void\ dibuja(java.awt.Graphics)
+comment4.params=dir
+comment4.target=void\ mover(char)
+comment5.params=dir\ ruta
+comment5.target=void\ mover(char,\ java.lang.String)
+numComments=6
