@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Gota
+comment1.params=x\ y\ ruta
+comment1.target=Gota(int,\ int,\ java.lang.String)
+comment2.params=g
+comment2.target=void\ dibuja(java.awt.Graphics)
+comment3.params=
+comment3.target=void\ caida()
+numComments=4
