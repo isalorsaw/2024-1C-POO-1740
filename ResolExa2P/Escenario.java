@@ -15,11 +15,13 @@ public class Escenario extends JPanel implements KeyListener,ActionListener
     Timer t;
     int seg;
     int timer=5;
+    Piedra p;
     public Escenario()
     {
         seg=0;
         f=new Fondo(0,0,"fondo.png");
         l=new Lancha(10,450,"lancha.png");
+        p=new Piedra(300,450,"piedra.png");
         inicializarGotas();
         //y=new Yate("imagenes/lancha.png",10,450);
         //System.out.println(f.toString());
@@ -38,18 +40,31 @@ public class Escenario extends JPanel implements KeyListener,ActionListener
     {
         if(e.getSource()==t)
         {
-            //System.out.println(seg+"");
-            seg++;
-            caidaGotas();
+            if(l.frenar==false)
+            actionTimer();
             
-    
-            l.mover('l');
             repaint();
         }
         /*else if(e.getSource()==t2)
         {
             
         }*/
+    }
+    public void actionTimer()
+    {
+            //System.out.println(seg+"");
+            seg++;
+            caidaGotas();
+            l.mover('l');
+            //Detectando si hay un choque
+            boolean cho=l.choque(p.rec);
+            System.out.println("Choque Piedra y Lancha "+cho);
+            if(cho==true)
+            {
+                 l.frenar();
+                 l.explotar();
+            }
+            //l.desaparecer();
     }
     public void inicializarGotas()
     {
@@ -109,6 +124,7 @@ public class Escenario extends JPanel implements KeyListener,ActionListener
         f.dibuja(g);
         dibujarGotas(g);
         l.dibuja(g);
+        p.dibuja(g);
         //y.dibuja(g);
     }
 }
