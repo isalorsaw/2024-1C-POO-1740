@@ -7,6 +7,8 @@ import java.awt.event.KeyEvent;//Libreria para utilizar variable de evento del t
 import javax.swing.Timer;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+
+import java.io.File;
 public class Escenario extends JPanel implements KeyListener,ActionListener
 {
     Fondo f;
@@ -63,6 +65,7 @@ public class Escenario extends JPanel implements KeyListener,ActionListener
             {
                  l.frenar();
                  l.explotar();
+                 play("explosion2.mp3");
             }
             //l.desaparecer();
     }
@@ -126,5 +129,22 @@ public class Escenario extends JPanel implements KeyListener,ActionListener
         l.dibuja(g);
         p.dibuja(g);
         //y.dibuja(g);
+    }
+    public void play(String ruta)
+    {
+        File file=new File(ruta);
+        //String ruta=file.getAbsolutePath();
+        //System.out.println(ruta);
+        
+        //String filename = "mariobros.mp3";//Inicializamos la Ruta
+        MP3Player mp3Player = new MP3Player(ruta);//Inicializamos MP3Player
+        mp3Player.play();//Reproducimos
+
+        /*Scanner sc = new Scanner(System.in);
+        System.out.println("Write stop to stop the music: ");
+
+        if (sc.nextLine().equalsIgnoreCase("stop")) {
+            mp3Player.close();
+        }*/
     }
 }
